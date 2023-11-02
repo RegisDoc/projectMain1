@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!DOCTYPE html>
+  {% extends 'base/index.html' %}
+  {% load static%}
+  {% block title %} Cars {% endblock %}
+  {% block css %} <link rel="stylesheet" href="{% static 'css/siera.css' %}"> {% endblock%}
+  {% block content %}
+  
+  
+
+
+
+
+
+
+ 
+<!-- 
+  <h1 class="cars1">Your journey begins with us – book your rental car below and hit the road!</h1> -->
+
+  <!-- <i class="fa-duotone fa-angles-down fa-bounce fa-2xl iconcar" 
+  style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i> -->
+
+
+
+  <!-- cards start -->
+  <!-- <div class="container">
+    <div class="row">
+
+      <div class="col-12 col-md-6 col-lg-4 mb-5">
+        <div class="card" style="width: 18rem;">
+          <img src="image/audia6.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">AUDI A6</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 mb-5">
+        <div class="card" style="width: 18rem;">
+          <img src="image/auris.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">TOYOTA AURIS</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 mb-5">
+        <div class="card" style="width: 18rem;">
+          <img src="image/bmw-3-series.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">BMW SERIA 3</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 mb-5">
+        <div class="card" style="width: 18rem;">
+          <img src="image/BMWX5.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">BMW X5</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 mb-5">
+        <div class="card" style="width: 18rem;">
+          <img src="image/bmwx6.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">BMW X6</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 mb-5">
+        <div class="card" style="width: 18rem;">
+          <img src="image/fabia-2.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">SKODA FABIA</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 mb-5">
+        <div class="card" style="width: 18rem;">
+          <img src="image/golf6.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">GOLF VI</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 mb-5">
+        <div class="card" style="width: 18rem;">
+          <img src="image/golf7.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">GOLF 7</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 mb-5">
+        <div class="card" style="width: 18rem;">
+          <img src="image/roomster.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">SKODA ROOMSTER</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 mb-5">
+        <div class="card" style="width: 18rem;">
+          <img src="image/seria5.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">BMW SERIA 5</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 mb-5">
+        <div class="card" style="width: 18rem;">
+          <img src="image/urbancruizer.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">TOYOTA URBAN CRUIZER</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-12 col-md-6 col-lg-4 mb-5">
+        <div class="card" style="width: 18rem;">
+          <img src="image/volvoxc90.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">VOLVO XC90</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div> -->
+      <!-- cards end -->
+
+    
+  {% endblock %}

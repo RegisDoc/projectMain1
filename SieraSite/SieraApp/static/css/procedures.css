@@ -1,0 +1,120 @@
+/* navbar background */
+.background{
+    background-color: rgb(20, 20, 20);
+    padding: 1%;
+
+}
+
+/*navbar logo */
+.image{
+    width: 100px;
+    height: auto;
+}
+
+/* navbar text*/
+.navbar-nav .nav-link{
+    color: rgb(217, 218, 163);
+    font-family: 'Crimson Text', serif;
+    font-size: 20px;
+    
+}
+
+
+/* positioning contact us & languages */
+ .d-flex {
+    display: flex!important;
+}
+.ms-5 {
+    margin-left: 40rem!important;
+}
+
+
+/* Form */
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+select,
+input[type="date"],
+input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+btn1 {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+btn1:hover {
+    background-color: #0056b3;
+}
+
+/* formsssssss */
+/* .bookingform{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+} */
+
+
+.bookingform{
+    display: flex;
+    background-color: ghostwhite;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+
+.booking-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    width: max-content;
+    padding: 20px 15%;
+  }
+  
+  .form-group1 {
+    flex: 1;
+  }
+  
+  .booking-form2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    justify-content: space-between;
+    width: max-content;
+    padding: 20px 5%;
+}
+  
+  .form-group {
+    flex: 1;
+  }
+  .button-form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+
+  
+  

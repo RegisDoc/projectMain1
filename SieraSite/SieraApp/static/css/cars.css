@@ -1,0 +1,49 @@
+/* navbar background */
+.background{
+    background-color: rgb(20, 20, 20);
+    padding: 1%;
+
+}
+
+/*navbar logo */
+.image{
+    width: 100px;
+    height: auto;
+}
+
+/* navbar text*/
+.navbar-nav .nav-link{
+    color: rgb(217, 218, 163);
+    font-family: 'Crimson Text', serif;
+    font-size: 20px;
+    
+}
+
+
+/* positioning contact us & languages */
+ .d-flex {
+    display: flex!important;
+}
+.ms-5 {
+    margin-left: 40rem!important;
+}
+
+
+/* CARS */
+.cars1{
+    font-family: 'ADLaM Display', cursive;
+    font-size: 30px;
+    text-align: center;
+    padding: 2%;
+    font-weight: bold;
+}
+
+/* .iconcar{
+    padding: 50% 20%;
+} */
+
+/* Cards */
+.container {
+    max-width: 1200px;
+    padding: 20px;
+}

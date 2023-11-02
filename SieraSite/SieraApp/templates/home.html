@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+{% extends 'base/index.html' %}
+{% load static%}
+{% block title %} Home {% endblock %}
+{% block css %} <link rel="stylesheet" href="{% static 'css/siera.css' %}"> {% endblock%}
+{% block content %}
+
+
+  
+
+  <!-- Background plane img -->
+  <div class="backgroundimg1">
+    <img src= "{% static 'image/pexels-maria-tyutina-249581.jpg' %}">
+
+    <!-- carousel starts-->
+    <div id="carouselExampleCaptions" class="carousel slide imageplane">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+          aria-label="Slide 4"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static ' image/bmwx6.png'  %}" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>BMW X6</h5>
+            <p>STARTS FROM: </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'image/fabia-2.png '  %}" class="d-block w-100 img-fluid" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>SKODA FABIA</h5>
+            <p>STARTS FROM: </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'image/golf7.png '  %}" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>GOLF 7</h5>
+            <p>STARTS FROM: </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'image/auris.png '  %}" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>TOYOTA AURIS</h5>
+            <p>STARTS FROM: </p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    
+  <!-- carousel ends -->
+  <div>
+    <hr width="0">
+  </div>
+  <br>
+  <h1 class="text1">Start Your Journey Here</h1>
+  <h1 class="offer">Car Rental Deals<i class="fa-solid fa-bell fa-shake" style="color: #ff0a0a;"></i></h1>
+  <hr width="0">
+                                                                                            
+                                   
+  <!-- cards start -->
+  <!-- <div class="container">
+    <div class="row">
+
+      <div class="col-12 col-md-6 col-lg-4 mb-5">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static ' '  %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">AUDI A6</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+           
+      <div class="col-12 col-md-6 col-lg-4 mb-5">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static ' '  %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">TOYOTA AURIS</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 mb-5">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static ' '  %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">BMW SERIA 3</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- <div class="col-12 col-md-6 col-lg-4 mb-5">
+        <div class="card" style="width: 18rem;">
+          <img src="image/BMWX5.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">BMW X5</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col-12 col-md-6 col-lg-4 mb-5">
+        <div class="card" style="width: 18rem;">
+          <img src="image/fabia-2.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">SKODA FABIA</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-12 col-md-6 col-lg-4 mb-5">
+        <div class="card" style="width: 18rem;">
+          <img src="image/golf7.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">GOLF 7</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 mb-5">
+        <div class="card" style="width: 18rem;">
+          <img src="image/roomster.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">SKODA ROOMSTER</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col-12 col-md-6 col-lg-4 mb-5">
+        <div class="card" style="width: 18rem;">
+          <img src="image/urbancruizer.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">TOYOTA URBAN CRUIZER</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-12 col-md-6 col-lg-4 mb-5">
+        <div class="card" style="width: 18rem;">
+          <img src="image/volvoxc90.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">VOLVO XC90</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+      cards end -->
+
+<!-- button here -->
+      <a href="{% static 'cars.html '  %}" class="btn btn-primary">Explore more car rental deals</a>
+
+      
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+{% endblock %}

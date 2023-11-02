@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+{% extends 'base/index.html' %}
+{% load static%}
+{% block title %} Rental {% endblock %}
+{% block css %} <link rel="stylesheet" href="{% static 'css/siera.css' %}"> {% endblock%}
+{% block content %}
+
+
+  <!-- 1 idea -->
+
+  <!-- <div class="container-fluid">
+    <div class="rent-text-container">
+      <h1 class="rent-text">Rent the Perfect Ride for You Below</h1>
+    </div>
+    <img class="background-img-rent" src="image/carsrent.jpg" alt="">
+    <div class="row justify-content-end align-items-end">
+      <div class="col-md-6">
+        <form>
+          <div class="container-fluid bookingformRent">
+            <div class="form-group1">
+              <label for="location">Pick-up Location</label>
+              <select id="location" class="form-control">
+                <option value="A">Tirana International Airport</option>
+                <option value="T">Tirana center</option>
+                <option value="D">Durres</option>
+              </select>
+            </div>
+            <div class="form-group1">
+              <label for="pickupDate">Pick-up Date</label>
+              <input type="text" id="pickupDate" class="form-control flatpickr" data-date-format="Y-m-d">
+            </div>
+
+            <div class="form-group1">
+              <label for="pickupTime">Pick-up Time</label>
+              <input type="text" id="pickupTime" class="form-control flatpickr" data-enable-time="true"
+                data-no-calendar="true" data-time_24hr="true" data-date-format="H:i">
+            </div>
+            <div class="form-group1">
+              <label for="Dropoffdate">Drop-off Date</label>
+              <input type="text" id="Dropoffdate" class="form-control flatpickr" data-date-format="Y-m-d">
+            </div>
+
+            <div class="form-group1">
+              <label for="Dropofftime">Drop-off Time</label>
+              <input type="text" id="Dropofftime" class="form-control flatpickr" data-enable-time="true"
+                data-no-calendar="true" data-time_24hr="true" data-date-format="H:i">
+            </div>
+          </div>
+          <div class="button-formRent">
+            <button type="submit" class="btn btn-primary btn1">NEXT</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  </div> -->
+
+
+
+
+
+
+
+
+
+
+  <!-- firstt form -->
+  <!-- <form>
+    <div class="container">
+      <h1
+        style="font-family: 'Times New Roman', Times, serif; font-size: 40px; text-align: center; color: rgb(8, 110, 76);">
+        Rent the Perfect Ride for You Below</h1>
+      <div>
+        <label for="location">Pick-up Location</label>
+        <select id="location" class="form-control">
+          <option value="A">Tirana International Airport</option>
+          <option value="T">Tirana center</option>
+          <option value="D">Durres</option>
+
+        </select>
+      </div>
+
+      <div>
+        <label for="pickup">Pick-up Date</label>
+        <input type="date" id="pickup" class="form-control">
+      </div>
+
+      <div>
+        <label for="pickupHour">Pick-up Time</label>
+        <input type="time" id="pickupHour" class="form-control">
+      </div>
+
+      <div>
+        <label for="dropoff">Drop-off Date</label>
+        <input type="date" id="dropoff" class="form-control">
+      </div>
+
+      <div>
+        <label for="dropoffHour">Drop-off Time</label>
+        <input type="time" id="dropoffHour" class="form-control">
+      </div>
+
+      <div>
+        <label for="sms">Any Questions?</label>
+        <textarea id="sms" cols="40">Type here..</textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn1">Search availability</button>
+    </div>
+  </form> -->
+
+
+
+
+
+
+
+  <!-- form starts -->
+
+
+
+  <!-- <form>
+    <div class="container-fluid bookingform"> -->
+
+      <!-- booking extra stuff -->
+      <!-- <div class="booking-form-end-part" style="font-family: auto; ">
+
+        <h2 style="text-align: center;">
+          No Hidden Fee's!<br> //Rental Charges are as shown below//<br> Choose your best fit :</h2>
+
+        <h3 style="font-weight: bold;">Insurance and Coverages:</h3>
+        <h4>Basic Insurance:</h4>
+        <p>This insurance, required by law, is always included. It covers damage to the other car involved in an
+          accident.</p>
+        <br>
+        <h4>Casco Insurance:</h4>
+        <p>Casco insurance covers the cost of repairing or replacing the rental vehicle if it's damaged while in your
+          possession.
+          This can include accidents, collisions, vandalism, and other forms of physical damage to the car.
+          In addition to covering damage to the other car involved, this insurance covers 80% of the damage to the car
+          you are renting.
+          Please Note:the remaining part (20%) will be paid by you.</p>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+          <label class="form-check-label" for="flexSwitchCheckDefault">Casco Insurance Included<br>Additional 15.00
+            Euros per day</label>
+        </div>
+        <br>
+        <h4>Full Coverage</h4>
+        <p>Full Coverage Plan includes protection against physical damage, such as collision coverage and comprehensive
+          coverage,
+          in addition to the required liability coverage.
+          This combination of coverages can provide financial protection
+          if you’re in an accident or if your vehicle is damaged in other incidents, such as vandalism or extreme
+          weather.</p>
+
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+          <label class="form-check-label" for="flexSwitchCheckDefault">Full Coverage Plan Included<br>Additional 20.00
+            Euros per day</label>
+        </div>
+        <br>
+        <h3 style="font-weight: bold;">Baby seat</h3>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+          <label class="form-check-label" for="flexSwitchCheckDefault">Baby seat Included<br>Additional 5.00 Euros per
+            day</label>
+        </div>
+        <br>
+        <div style=" font-family: auto;">
+          <h4>Included in the basic price:</h4>
+          <h5>1)Basic Insurance</h5>
+          <h5>2)Unlimited kilometers</h5>
+          <h5>3)Free Road Assistance Inside Albania</h5>
+          <h5>4)We operate 24/7</h5>
+        </div>
+
+
+
+        <br>
+      </div>
+      <div class="button-form">
+        <button type="submit" class="btn btn-primary btn1">NEXT</button>
+      </div> -->
+      <!-- dua te krijoj fushen ku shfaqen te dhenat + total to be paid -->
+
+  </form>
+
+
+
+
+<!-- flatpickr enabled -->
+  <!-- <script>
+    flatpickr(".flatpickr", {
+        enableTime: false,
+        dateFormat: "Y-m-d",
+        timeFormat: "H:i",
+        
+    
+    }); -->
+
+   
+        
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+ 

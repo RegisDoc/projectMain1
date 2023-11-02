@@ -1,0 +1,140 @@
+/* *{
+    border: 1px solid red;
+} */
+
+/* navbar background */
+.background{
+    background-color: rgb(20, 20, 20);
+    padding: 1%;
+
+}
+
+/*navbar logo */
+.image{
+    width: 100px;
+    height: auto;
+}
+
+/* navbar text*/
+.navbar-nav .nav-link{
+    color: rgb(217, 218, 163);
+    font-family: 'Crimson Text', serif;
+    font-size: 20px;
+    
+}
+
+
+/* positioning contact us & languages */
+ .d-flex {
+    display: flex!important;
+}
+.ms-5 {
+    margin-left: 40rem!important;
+}
+
+/* carousel */
+.carousel-caption{
+    text-align: left;
+    
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    margin: 30% 1px;
+   position: absolute;
+font-size: 35px;
+}
+
+
+.carousel-inner,
+.carousel-inner img {
+    height: 400px;
+    width: 60%;
+    margin: auto;
+    background-position: center;
+    position: relative;
+    /* background-color: white; */
+    
+}
+/* carousel next */
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+background-color: black;
+
+
+}
+
+/* text under carousel */
+.text1{
+    font-family: 'Tilt Prism', cursive;
+    text-align: center;
+    margin-top: 92px;
+    
+}
+
+.offer{
+    color: rgb(1, 2, 3);
+    font-weight: bold;
+    font-family: 'Crimson Text', serif;
+   
+    padding-left: 10%;
+}
+
+
+
+
+
+btn1 {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+btn1:hover {
+    background-color: #0056b3;
+}
+/* positioning contact us & languages */
+.d-flex {
+    display: flex!important;
+}
+.ms-5 {
+    margin-left: 40rem!important;
+}
+
+
+/* Backgrund Image carousel  */
+/* .carousel, 
+.carousel-inner,
+.carousel-inner img{
+    background-image: url('https://thumbs.dreamstime.com/b/airplane-landing-flying-airport-sun-sunset-vacation-holidays-tra-airplane-landing-flying-airport-sun-sunset-vacation-holidays-104090086.jpg');
+
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+
+  } */
+.backgroundimg1 img{
+    width: 100%;
+    height: 100%;
+    /* position:absolute; */
+
+    
+}
+.backgroundimg1{
+    position: relative;
+    height: 355px;
+}
+.backgroundimg1 #carouselExampleCaptions{
+    position: absolute;
+    top: 80px;
+}
+
+/* footer */
+.footerform{
+    width:50%;
+    height: auto;
+    text-align: center;
+    left: 50%;
+}
