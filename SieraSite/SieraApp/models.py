@@ -1,28 +1,88 @@
 from django.db import models
+from django.core.validators import *
 from django.contrib.auth.models import User
 # Create your models here.
 
-class CarManager(models.Manager):
-    def create_car(self, model, price_per_hour, image):
-        car = self.model(model=model, price_per_hour=price_per_hour, image=image)
-        car.save()
-        return car
 
+class Location(models.Model):
+    city = models.CharField(max_length=50, null=True, blank=True)
+ 
+    def __str__(self):
+        return self.city
+ 
+class CarDealer(models.Model):
+    car_dealer = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
+    phone =  models.CharField(validators = [MinLengthValidator(10), MaxLengthValidator(10)], max_length = 10, null=True, blank=True)
+    location = models.OneToOneField(Location, on_delete=models.PROTECT, null=True, blank=True)
+    earnings = models.IntegerField(default=0, null=True, blank=True)
+    type = models.CharField(max_length=20, blank=True, null=True)
+ 
+    def __str__(self):
+        return str(self.car_dealer)
+ 
 class Car(models.Model):
-    model = models.CharField(max_length=100)
-    price_per_hour = models.DecimalField(max_digits=6, decimal_places=2)
-    image = models.ImageField(upload_to='car_images')
-    created_by = models.ForeignKey(User, on_delete=models.CASCADE)
-    is_rented = models.BooleanField(default=False)
-   
-    objects = CarManager()
-
+    name = models.CharField(max_length=50, null=True, blank=True)
+    image = models.ImageField(upload_to="", null=True, blank=True)
+    car_dealer = models.ForeignKey(CarDealer, on_delete=models.PROTECT, null=True, blank=True)
+    capacity = models.CharField(max_length=2, null=True, blank=True)
+    location = models.ForeignKey(Location, on_delete=models.SET_NULL, null=True, blank=True)
+    is_available = models.BooleanField(default=True,null=True, blank=True)
+    rent = models.CharField(max_length=10, blank=True, null=True)
+    price = models.DecimalField(max_digits = 3, decimal_places=0, null=True, blank=True)
+ 
     def __str__(self):
-        return self.model
-class CartItem(models.Model):
-    car = models.ForeignKey(Car, on_delete=models.CASCADE)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    quantity = models.PositiveIntegerField(default=1)
-
+        return self.name
+ 
+class Customer(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    phone = models.CharField(validators = [MinLengthValidator(10), MaxLengthValidator(10)], max_length = 10, null=True, blank=True)
+    location = models.ForeignKey(Location, on_delete=models.CASCADE, null=True, blank=True)
+    type  = models.CharField(max_length=20, blank=True, null=True)
+ 
     def __str__(self):
-        return f"{self.quantity} x {self.car.model}"
+        return str(self.user)
+ 
+class Order(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    car_dealer = models.ForeignKey(CarDealer, on_delete=models.CASCADE, null=True, blank=True)
+    car = models.ForeignKey(Car, on_delete=models.CASCADE, null=True, blank=True)
+    rent = models.CharField(max_length=10, null=True, blank=True)
+    days = models.CharField(max_length=3, null=True, blank=True)
+    is_complete = models.BooleanField(default=False, null=True, blank=True)
+
+class carDetail(models.Model):
+    name = models.CharField(max_length=50, null=True, blank=True)
+    image = models.ImageField(upload_to="car_images/", null=True, blank=True)
+    capacity = models.CharField(max_length=2, null=True, blank=True)
+    is_available = models.BooleanField(default=True,null=True, blank=True)
+    price = models.DecimalField(max_digits = 3, decimal_places=0, null=True, blank=True)
+    year=  models.DecimalField(max_digits = 4, decimal_places=0, null=True, blank=True)
+    engine = models.CharField(max_length=50, null=True, blank=True)
+    transmission = models.CharField(max_length=50, null=True, blank=True)
+    include = models.CharField(max_length=250, null=True, blank=True)
+  
+
+
+#   from datetime import datetime, timedelta
+
+# class CarRental:
+#     def __init__(self, daily_rate, hourly_rate,):
+#         self.daily_rate = daily_rate
+#         self.hourly_rate = hourly_rate
+        
+
+#     def calculate_rental_cost(self, start_time, end_time):
+        
+#         rental_duration = end_time - start_time
+#         days = rental_duration.days
+#         hours = rental_duration.seconds // 3600
+
+#         total_cost = (self.daily_rate * days) + (self.hourly_rate * hours) 
+
+        
+
+#         return total_cost
+
+# rental_agency = CarRental(daily_rate=50, hourly_rate=10)
+
+# print(f'Total Rental Cost: ${total_cost:.2f}')

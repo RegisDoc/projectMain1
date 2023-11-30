@@ -1,27 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-  <!DOCTYPE html>
-  {% extends 'base/index.html' %}
-  {% load static%}
-  {% block title %} Contact {% endblock %}
-  {% block css %} <link rel="stylesheet" href="{% static 'css/siera.css' %}"> {% endblock%}
-  {% block content %}
+{% extends 'base/index.html' %}
+{% load static%}
+{% block title %}Contact us {% endblock %}
+{% block css %} <link rel="stylesheet" href="{% static 'css/contact.css' %}"> {% endblock%}
+{% block content %}
  
-  
-
-
 <!-- imazhi -->
-  <!-- <img src="image/siera1.png" class="contactimg">
-  <h2 class="contact1">Welcome To Siera Car Rental Agency!</h2>
+ <img src="{% static 'image/siera1.png' %}"  class="contactimg">
+  <h2 class="contact1">Welcome To Siera Car Rental Agency!</h2> 
 
 
   <h1 class="ReachOut">Reach Out to Us</h1>
   <p class="Text">Have any questions about car availability, security, or need more information? <pre class="Text">Our team is here to assist you.
      You can reach out to us directly using the contact details below or by completing the form.</pre></p>
-  form starts -->
+  <!-- form starts  -->
   
 
-  <!-- <form action="process_form.php" method="POST">
+<form action="process_form.php" method="POST">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required>
 
@@ -35,10 +30,10 @@
     <textarea id="message" name="message" rows="4" required></textarea>
 
     <input type="submit" value="Submit">
-</form> -->
+</form> 
 
 <!-- contact fields -->
-<!-- <div class="contact-info">
+<div class="contact-info">
   <div class="contact-section">
       <h2 class="contact-title">OUR CONTACTS</h2>
       <ul class="contact-details">
@@ -58,7 +53,7 @@
       </ul>
   </div>
  </div>
- -->
+
 
 
   

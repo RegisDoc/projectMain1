@@ -4,65 +4,12 @@
 {% extends 'base/index.html' %}
 {% load static%}
 {% block title %} About {% endblock %}
-{% block css %} <link rel="stylesheet" href="{% static 'css/siera.css' %}"> {% endblock%}
+{% block css %} <link rel="stylesheet" href="{% static 'css/about.css' %}"> {% endblock%}
 {% block content %}
 
-
-
-
-<body>
-  <!-- navbar starts -->
-  <nav class="navbar navbar-expand-lg  background" data-bs-theme="dark">
-    <div class="container-fluid">
-      <a class="navbar-brand " href="#">
-        <img src="image/siera1.png" alt="Logo" class="d-inline-block align-text-top image">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse " id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4" style="display: flex;
-        align-items: center;">
-          <li class="nav-item">
-            <a class="nav-link home" aria-current="page" href="siera.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="rental.html">Rental</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="cars.html">Cars</a>
-          </li>
-          <div class="d-flex ms-5" style="display: flex;
-          align-items: center;">
-            <li class="nav-item">
-              <a class="nav-link contact" href="contact.html">Contact us</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Language
-              </a>
-
-            </li>
-
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">English</a></li>
-              <li><a class="dropdown-item" href="#">Italian</a></li>
-            </ul>
-          </div>
-        </ul>
-
-      </div>
-    </div>
-  </nav>
-  <!--navbar ends -->
-
+  
 <!-- first img starts -->
-  <img src="image/siera1.png" class="aboutimg">
+  <img src="{% static 'image/siera1.png' %}" class="aboutimg">
   <h2 class="about1">Welcome To Siera Car Rental Agency!</h2>
 <!-- image ends -->
 
@@ -81,7 +28,7 @@
   <div class="row row-cols-1 row-cols-md-3 g-4 why-choose-us">
     <div class="col">
       <div class="card">
-        <img src="image/carsabout.jpg" class="card-img-top" style="height: 358px;" alt="...">
+        <img src="{% static 'image/carsabout.jpg' %}" class="card-img-top" style="height: 358px;" alt="...">
         <div class="card-body">
           <h5 class="card-title">Wide Range of Vehicles: </h5>
           <p class="card-text">Choose from our diverse fleet of vehicles, including compact cars, spacious SUVs,
@@ -92,7 +39,7 @@
     </div>
     <div class="col">
       <div class="card">
-        <img src="image/bookingabout.jpg" class="card-img-top" alt="...">
+        <img src="{% static 'image/bookingabout.jpg' %}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Easy Online Booking: </h5>
           <p class="card-text">Our user-friendly online platform allows you to book your desired vehicle in just a few
@@ -102,7 +49,7 @@
     </div>
     <div class="col">
       <div class="card">
-        <img src="image/no-hidden-fee-guarantee-1.png" class="card-img-top" alt="...">
+        <img src="{% static 'image/no-hidden-fee-guarantee-1.png' %}"  class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Competitive Rates:</h5>
           <p class="card-text">We offer competitive and transparent pricing with no hidden fees. Enjoy great value for
@@ -112,7 +59,7 @@
     </div>
     <div class="col">
       <div class="card">
-        <img src="image/agreement.jpg" class="card-img-top" alt="...">
+        <img src="{% static 'image/agreement.jpg' %}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Exceptional Customer Service:</h5>
           <p class="card-text">Our dedicated customer support team is available around the clock to assist you with any
@@ -122,7 +69,7 @@
     </div>
     <div class="col">
       <div class="card">
-        <img src="image/babyseatabout.jpg" class="card-img-top" alt="...">
+        <img src="{% static 'image/babyseatabout.jpg' %}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Optional Extras:</h5>
           <p class="card-text">Customize your rental experience with optional add-ons such as GPS navigation, child
@@ -132,7 +79,7 @@
     </div>
     <div class="col">
       <div class="card">
-        <img src="image/safetyabout.jpg" class="card-img-top" alt="...">
+        <img src="{% static 'image/safetyabout.jpg' %}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Safety First:</h5>
           <p class="card-text">Your safety is important to us. Our vehicles undergo rigorous maintenance and cleaning
@@ -153,7 +100,7 @@
         <div class="card mb-3 custom-card">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="image/driver-license.png.png" class="img-fluid rounded-start" alt="...">
+              <img src="{% static 'image/driver-license.png.png' %}" class="img-fluid rounded-start" alt="...">
             </div>
             <div class="col-md-8">
               <div class="card-body">
@@ -169,7 +116,7 @@
         <div class="card mb-3 custom-card">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="image/front-of-id-card.png" class="img-fluid rounded-start" alt="...">
+              <img src="{% static 'image/front-of-id-card.png' %}" class="img-fluid rounded-start" alt="...">
             </div>
             <div class="col-md-8">
               <div class="card-body">
@@ -184,7 +131,7 @@
         <div class="card mb-3 custom-card">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="image/21-plus-sign.jpg.jpg" class="img-fluid rounded-start" alt="...">
+              <img src="{% static 'image/21-plus-sign.jpg.jpg' %}" class="img-fluid rounded-start" alt="...">
             </div>
             <div class="col-md-8">
               <div class="card-body">
@@ -200,7 +147,7 @@
         <div class="card mb-3 custom-card">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="image/64-640315_coverage-confirmation-icon.jpg" class="img-fluid rounded-start" alt="...">
+              <img src="{% static 'image/64-640315_coverage-confirmation-icon.jpg' %}" class="img-fluid rounded-start" alt="...">
             </div>
             <div class="col-md-8">
               <div class="card-body">
@@ -217,16 +164,10 @@
 
 
 
-  <!-- how to show google reviews -->
+ 
 
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
-    integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
-    crossorigin="anonymous"></script>
-</body>
+  
 {% endblock %}

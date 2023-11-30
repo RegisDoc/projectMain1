@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "SieraApp"
+    "SieraApp",
+    'django.contrib.humanize'
 ]
 
 MIDDLEWARE = [
@@ -121,7 +122,11 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
     ]
 
+# Base url to serve media files
+MEDIA_URL = '/media/'
 
+# Path where media is stored'
+MEDIA_ROOT = BASE_DIR / 'media'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 

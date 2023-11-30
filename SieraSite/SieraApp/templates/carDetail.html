@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!DOCTYPE html>
+  {% extends 'base/index.html' %}
+  {% load static%}
+  {% block title %} Cars {% endblock %}
+  {% block css %} <link rel="stylesheet" href="{% static 'css/detail.css' %}"> {% endblock%}
+  {% block content %}
+  
+    <div class="card" >
+      <img src="{{carInfo.image.url}}" class="card-img-top" alt="..." style="width: 50%; margin: 30px;">
+      <div class="card-body">
+        <h5 class="card-title" style="position: absolute; font-family: serif; font-size: 45px; font-weight: bold; top: 20px;margin-left: 60%;">{{carInfo.name}}</h5>
+        <p style="position: absolute;top: 11%;margin-left: 55%; font-family: math;font-size: 25px;color: red; font-style: italic;">Price starts from: €{{ carInfo.price }} per day!</p>
+        <div class="included">
+          <h4>Included in the basic price:</h4>
+          <h5>~Basic Insurance</h5>
+          <h5>~Unlimited kilometers</h5>
+          <h5>~Free Road Assistance Inside Albania</h5>
+          <h5>~We operate 24/7</h5>
+        </div>
+      </div>
+  <div class="booking">
+    <h1 class="bookingtext">Complete the fields to unlock a rental experience filled with happiness and driving satisfaction!</h1>
+
+   <form>
+          <div class="container details">
+           
+           
+            <div>
+              <label for="pickup">Pick-up Date</label>
+              <input type="date" id="pickup" class="form-control">
+            </div>
+      
+            <div>
+              <label for="pickupHour">Pick-up Time</label>
+              <input type="time" id="pickupHour" class="form-control">
+            </div>
+      
+            <div>
+              <label for="dropoff">Drop-off Date</label>
+              <input type="date" id="dropoff" class="form-control">
+            </div>
+      
+            <div>
+              <label for="dropoffHour">Drop-off Time</label>
+              <input type="time" id="dropoffHour" class="form-control">
+            </div>
+      <div>
+        <br>
+            <button type="submit" class="btn btn-primary btnstyle">Complete booking</button>
+          </div>
+        </form>
+       </div>
+      
+  
+    </div>
+
+
+    
+  {% endblock %}

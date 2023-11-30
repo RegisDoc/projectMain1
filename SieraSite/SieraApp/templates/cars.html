@@ -12,7 +12,22 @@
 
 
 
-
+  <div class="container">
+    <div class="row">
+{% for car in cars %}
+      <div class="col-12 col-md-6 col-lg-4 mb-5">
+        <div class="card" style="width: 18rem;">
+          <img src="{{car.image.url}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{car.name}}</h5>
+            <p>Starts from: €{{ car.price }} per day</p>   
+            <a href="{% url 'carDetail' car.pk %}" class="btn btn-primary">Rent here</a>
+          </div>
+        </div>
+      </div>
+         {% endfor %}  
+     </div>
+     </div>
 
  
 <!-- 
