@@ -29,7 +29,7 @@
     display: flex!important;
 }
 .ms-5 {
-    margin-left: 40rem!important;
+    margin-left: 35rem!important;
 }
 
 body{
@@ -49,17 +49,19 @@ body{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
     margin-left: 10px;
+    font-family: monospace;
 }
 .details:hover {
     transform: scale(1.05);
 }
 
-.included{
+.information{
     position: absolute;
-    top: 20%;
-    margin-left: 55%;
-    font-family: math;
-    font-size: 20px;
+    top: 16%;
+    left: 62%;
+    font-family: fangsong;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 
@@ -71,15 +73,33 @@ body{
    
     align-items: center;
 }
-.bookingtext{
-    font-family: ui-monospace;
-    width: 47%;
-    margin-top: 35px;
+
+
+
+.included{
+    font-family: auto;
+    /* width: 47%; */
+    margin-top: 5px;
     left: 20px;
     text-align: center;
+    margin: 30px;
+    font-family: unset;
+    font-size: 40px;
+    text-align: center;
+    width: 40%;
+    color: rgb(96, 104, 112);
+    /* background-color: mintcream;  */
 
 }
 
+
+
+.bookingtext{
+    font-family:  auto;
+    font-size: 30px;
+    text-align: center;
+    width: 90%;
+}
 .btnstyle{
     background-color: #3498db;
     color: #fff;
@@ -90,4 +110,13 @@ body{
 
 .btnstyle{
     background-color: #2980b9;
+}
+
+
+/* footer */
+.footerform{
+    width:50%;
+    height: auto;
+    text-align: center;
+    left: 50%;
 }

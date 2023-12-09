@@ -30,7 +30,7 @@
 }
 
 .ms-5 {
-    margin-left: 40rem !important;
+    margin-left: 35rem !important;
 }
 
 
@@ -128,5 +128,13 @@
     position: relative;
     left: 100px;
     padding: 20px;
+}
+
+/* footer */
+.footerform{
+    width:50%;
+    height: auto;
+    text-align: center;
+    left: 50%;
 }
 

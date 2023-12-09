@@ -7,7 +7,9 @@ admin.site.register(Customer)
 admin.site.register(Car,)
 admin.site.register(CarDealer)
 admin.site.register(Location)
-admin.site.register(carDetail)
+admin.site.register(CarRental)
+
+
 
 
 

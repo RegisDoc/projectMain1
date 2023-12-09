@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% extends 'base/index.html' %}
+{% load static%}
+{% block title %} Reservation {% endblock %}
+{% block css %} <link rel="stylesheet" href="{% static 'css/myReservation.css' %}"> {% endblock%}
+{% block content %}
+
+<h1>Your reservation details are as follows:</h1>
+<div class="information">
+    <p>{{carInfo.name}}</p>
+    <img src="{{carInfo.image.url}}">
+    <p>Price per day: {{carInfo.price}}</p>
+    <p>Year: {{carInfo.year}}</p>
+    <p>Engine: {{carInfo.engine}}</p>
+    <p>Transmission:  {{carInfo.transmission}}</p>
+    <p>Include:  {{carInfo.include}}</p>
+    <p></p>
+  </div>
+   
+        
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+ 

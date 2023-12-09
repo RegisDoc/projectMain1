@@ -12,17 +12,27 @@
       <div class="card-body">
         <h5 class="card-title" style="position: absolute; font-family: serif; font-size: 45px; font-weight: bold; top: 20px;margin-left: 60%;">{{carInfo.name}}</h5>
         <p style="position: absolute;top: 11%;margin-left: 55%; font-family: math;font-size: 25px;color: red; font-style: italic;">Price starts from: €{{ carInfo.price }} per day!</p>
-        <div class="included">
-          <h4>Included in the basic price:</h4>
-          <h5>~Basic Insurance</h5>
-          <h5>~Unlimited kilometers</h5>
-          <h5>~Free Road Assistance Inside Albania</h5>
-          <h5>~We operate 24/7</h5>
-        </div>
+        
       </div>
-  <div class="booking">
-    <h1 class="bookingtext">Complete the fields to unlock a rental experience filled with happiness and driving satisfaction!</h1>
+<div class="information">
+  <p>Year: {{carInfo.year}}</p>
+  <p>Engine: {{carInfo.engine}}</p>
+  <p>Transmission:  {{carInfo.transmission}}</p>
+  <p>Include:  {{carInfo.include}}</p>
+</div>
 
+ 
+<h1 class="bookingtext"><i class="fa-regular fa-bell" style="color: #642020; font-family: auto;">Complete the fields to unlock a rental experience filled with happiness and driving satisfaction!</i></h1>
+<!-- kam perdorur nje icon por nuk funsionon nese une vendos nje font-family -->
+
+ <div class="booking">
+<div class="included">
+  <h4>Included in the basic price:</h4>
+  <h5><i class="fa-solid fa-hashtag" style="color: #97aed3;"></i>Basic Insurance</h5>
+  <h5><i class="fa-solid fa-hashtag" style="color: #97aed3;"></i>Unlimited kilometers</h5>
+  <h5><i class="fa-solid fa-hashtag" style="color: #97aed3;"></i>Free Road Assistance Inside Albania</h5>
+  <h5><i class="fa-solid fa-hashtag" style="color: #97aed3;"></i>We operate 24/7</h5>
+</div> 
    <form>
           <div class="container details">
            

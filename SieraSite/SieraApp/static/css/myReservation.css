@@ -1,0 +1,41 @@
+/* navbar background */
+.background{
+    background-color: rgb(20, 20, 20);
+    padding: 1%;
+
+}
+
+/*navbar logo */
+.image{
+    width: 100px;
+    height: auto;
+}
+
+/* navbar text*/
+.navbar-nav .nav-link{
+    color: rgb(217, 218, 163);
+    font-family: 'Crimson Text', serif;
+    font-size: 20px;
+    
+}
+
+
+/* positioning contact us & languages */
+ .d-flex {
+    display: flex!important;
+}
+.ms-5 {
+    margin-left: 35rem!important;
+}
+
+
+
+  
+
+/* footer */
+.footerform{
+    width:50%;
+    height: auto;
+    text-align: center;
+    left: 50%;
+}

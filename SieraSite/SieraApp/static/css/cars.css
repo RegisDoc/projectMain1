@@ -1,49 +1,78 @@
 /* navbar background */
-.background{
+.background {
     background-color: rgb(20, 20, 20);
     padding: 1%;
 
 }
 
 /*navbar logo */
-.image{
+.image {
     width: 100px;
     height: auto;
 }
 
 /* navbar text*/
-.navbar-nav .nav-link{
+.navbar-nav .nav-link {
     color: rgb(217, 218, 163);
     font-family: 'Crimson Text', serif;
     font-size: 20px;
-    
+
 }
 
 
 /* positioning contact us & languages */
- .d-flex {
-    display: flex!important;
+.d-flex {
+    display: flex !important;
 }
+
 .ms-5 {
-    margin-left: 40rem!important;
+    margin-left: 35rem !important;
 }
 
 
 /* CARS */
-.cars1{
-    font-family: 'ADLaM Display', cursive;
-    font-size: 30px;
-    text-align: center;
-    padding: 2%;
-    font-weight: bold;
+
+.carsText {
+    font-family: fangsong;
+    font-style: oblique;
+    margin: 50px 30%;
+    color: rgb(206, 158, 38);
+    text-shadow: 7 22 black;
+    font-weight: bolder;
+
 }
 
-/* .iconcar{
-    padding: 50% 20%;
-} */
+
+
+.btn1 {
+
+    background-color: rgb(70, 130, 241);
+    padding: 7px 50px;
+    text-align: center;
+    margin-left: 42px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+
+.btn1:hover {
+    background-color: #045bb8;
+}
 
 /* Cards */
 .container {
     max-width: 1200px;
     padding: 20px;
+}
+
+/* footer */
+.footerform {
+    width: 50%;
+    height: auto;
+    text-align: center;
+    left: 50%;
 }

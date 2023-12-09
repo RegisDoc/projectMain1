@@ -24,11 +24,14 @@ class Car(models.Model):
     name = models.CharField(max_length=50, null=True, blank=True)
     image = models.ImageField(upload_to="", null=True, blank=True)
     car_dealer = models.ForeignKey(CarDealer, on_delete=models.PROTECT, null=True, blank=True)
-    capacity = models.CharField(max_length=2, null=True, blank=True)
     location = models.ForeignKey(Location, on_delete=models.SET_NULL, null=True, blank=True)
     is_available = models.BooleanField(default=True,null=True, blank=True)
     rent = models.CharField(max_length=10, blank=True, null=True)
     price = models.DecimalField(max_digits = 3, decimal_places=0, null=True, blank=True)
+    year=  models.DecimalField(max_digits = 4, decimal_places=0, null=True, blank=True)
+    engine = models.CharField(max_length=50, null=True, blank=True)
+    transmission = models.CharField(max_length=150, null=True, blank=True)
+    include = models.CharField(max_length=250, null=True, blank=True)
  
     def __str__(self):
         return self.name
@@ -50,38 +53,28 @@ class Order(models.Model):
     days = models.CharField(max_length=3, null=True, blank=True)
     is_complete = models.BooleanField(default=False, null=True, blank=True)
 
-class carDetail(models.Model):
-    name = models.CharField(max_length=50, null=True, blank=True)
-    image = models.ImageField(upload_to="car_images/", null=True, blank=True)
-    capacity = models.CharField(max_length=2, null=True, blank=True)
-    is_available = models.BooleanField(default=True,null=True, blank=True)
-    price = models.DecimalField(max_digits = 3, decimal_places=0, null=True, blank=True)
-    year=  models.DecimalField(max_digits = 4, decimal_places=0, null=True, blank=True)
-    engine = models.CharField(max_length=50, null=True, blank=True)
-    transmission = models.CharField(max_length=50, null=True, blank=True)
-    include = models.CharField(max_length=250, null=True, blank=True)
-  
+
 
 
 #   from datetime import datetime, timedelta
 
-# class CarRental:
-#     def __init__(self, daily_rate, hourly_rate,):
-#         self.daily_rate = daily_rate
-#         self.hourly_rate = hourly_rate
+class CarRental(models.Model):
+    def __init__(self, daily_rate, hourly_rate,):
+        self.daily_rate = daily_rate
+        self.hourly_rate = hourly_rate
         
 
-#     def calculate_rental_cost(self, start_time, end_time):
+    def calculate_rental_cost(self, start_time, end_time):
         
-#         rental_duration = end_time - start_time
-#         days = rental_duration.days
-#         hours = rental_duration.seconds // 3600
+        rental_duration = end_time - start_time
+        days = rental_duration.days
+        hours = rental_duration.seconds // 3600
 
-#         total_cost = (self.daily_rate * days) + (self.hourly_rate * hours) 
+        total_cost = (self.daily_rate * days) + (self.hourly_rate * hours) 
 
         
 
-#         return total_cost
+        return total_cost
 
 # rental_agency = CarRental(daily_rate=50, hourly_rate=10)
 

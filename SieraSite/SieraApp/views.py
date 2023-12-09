@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse
 from .models import *
+from datetime import datetime
 # Create your views here.
 def home(request):
     cars = Car.objects.all()
@@ -19,20 +20,33 @@ def carDetail(request,id):
     carInfo = Car.objects.get(pk=id)
     context = {"carInfo":carInfo}
     return render(request, "carDetail.html",context)
+def myReservation (request):
+    myReservation = CarRental.objects.all()
+    context = {"myReservation": CarRental}
+    return render(request, "myReservation.html", context)
+
+
+
+# to calculate the booking process
+
+# def calculate_booking_duration(start_date_str, end_date_str):
+#     # Convert date strings to datetime objects
+#     start_date = datetime.strptime(start_date_str, '%Y-%m-%d %H:%M:%S')
+#     end_date = datetime.strptime(end_date_str, '%Y-%m-%d %H:%M:%S')
+
+#     # Calculate the difference between dates
+#     duration = end_date - start_date
+
+#     # Extract days and seconds from the duration
+#     days = duration.days
+#     seconds = duration.seconds
+
+#     # Calculate hours from seconds
+#     hours = seconds // 3600
+
+#     return days, hours
 
 
 
 
-# def homepage(request):
-#     search_query = request.GET.get("q", "")
-#     cars = Car.objects.all()
 
-#     if search_query:
-#         cars = cars.filter(model__icontains=search_query)
-
-#     context = {
-#         "cars": cars,
-#         "search_query": search_query,
-#     }
-
-#     return render(request, "app/homepage.html", context)
