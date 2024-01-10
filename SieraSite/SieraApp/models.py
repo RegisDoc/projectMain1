@@ -46,36 +46,62 @@ class Customer(models.Model):
         return str(self.user)
  
 class Order(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
-    car_dealer = models.ForeignKey(CarDealer, on_delete=models.CASCADE, null=True, blank=True)
+   
     car = models.ForeignKey(Car, on_delete=models.CASCADE, null=True, blank=True)
-    rent = models.CharField(max_length=10, null=True, blank=True)
-    days = models.CharField(max_length=3, null=True, blank=True)
-    is_complete = models.BooleanField(default=False, null=True, blank=True)
+    fullname = models.CharField(max_length=50, null=True, blank=True)
+    pick_day = models.DateField(null=True, blank=True)
+    drop_day = models.DateField(null=True, blank=True)
+    pick_time = models.TimeField(null=True, blank=True)
+    drop_time = models.TimeField(null=True, blank=True)
+    email = models.EmailField(null=True, blank=True)
+    phone = models.CharField(validators = [MinLengthValidator(10), MaxLengthValidator(10)], max_length = 10, null=True, blank=True)
+
+    def __str__(self):
+        return str(self.fullname)
+
+
 
 
 
 
 #   from datetime import datetime, timedelta
 
-class CarRental(models.Model):
-    def __init__(self, daily_rate, hourly_rate,):
-        self.daily_rate = daily_rate
-        self.hourly_rate = hourly_rate
+# class CarRental(models.Model):
+#     def __init__(self, daily_rate, hourly_rate,):
+#         self.daily_rate = daily_rate
+#         self.hourly_rate = hourly_rate
         
 
-    def calculate_rental_cost(self, start_time, end_time):
+#     def calculate_rental_cost(self, start_time, end_time):
         
-        rental_duration = end_time - start_time
-        days = rental_duration.days
-        hours = rental_duration.seconds // 3600
+#         rental_duration = end_time - start_time
+#         days = rental_duration.days
+#         hours = rental_duration.seconds // 3600
 
-        total_cost = (self.daily_rate * days) + (self.hourly_rate * hours) 
+#         total_cost = (self.daily_rate * days) + (self.hourly_rate * hours) 
 
         
 
-        return total_cost
+#         return total_cost
 
 # rental_agency = CarRental(daily_rate=50, hourly_rate=10)
 
 # print(f'Total Rental Cost: ${total_cost:.2f}')
+
+
+class CarRental(models.Model):
+    def __init__(self, daily_rate, hourly_rate,):
+       self.daily_rate = daily_rate
+       self.hourly_rate = hourly_rate
+        
+
+    def calculate_rental_cost(self, order):
+        # Assuming order has 'start_time' and 'end_time' fields
+        rental_duration = order.end_time - order.start_time
+        days = rental_duration.days
+        hours = rental_duration.seconds // 3600
+
+        total_cost = (self.daily_rate * days) + (self.hourly_rate * hours)
+
+        return total_cost
+

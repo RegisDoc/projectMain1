@@ -19,18 +19,13 @@
 .navbar-nav .nav-link {
     color: rgb(217, 218, 163);
     font-family: 'Crimson Text', serif;
-    font-size: 20px;
+    font-size: 22px;
 
 }
 
-
-/* positioning contact us & languages */
-.d-flex {
-    display: flex !important;
-}
-
-.ms-5 {
-    margin-left: 35rem !important;
+/* positioning contact us  */
+.contact{
+    margin-left: 51rem!important;
 }
 
 
